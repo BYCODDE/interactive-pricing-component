@@ -1,0 +1,7 @@
+.right-triangle {
+    width: 0;
+    height: 0;
+    border-right: 100px solid blue; /* Adjust size and color as needed */
+    border-bottom: 100px solid transparent;
+  }
+  
