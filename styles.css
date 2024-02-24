@@ -1,7 +1,57 @@
-.right-triangle {
-    width: 0;
-    height: 0;
-    border-right: 100px solid blue; /* Adjust size and color as needed */
-    border-bottom: 100px solid transparent;
+body {
+    font-family: "Manrope", sans-serif !important;
+    background: #f9faff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top_container {
+    border-radius: 0px 0px 0px 191.5px;
+    background: #f1f5fe;
+    width: 100%;
+    height: 449px;
+    text-align: center;
+    border-radius: 0px 0px 0px 191.5px;
+    background: #f1f5fe;
+    width: 100%;
+    height: 449px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .top_section {
+    position: absolute;
+    margin-top: 104px;
+  }
+  .main_svg {
+    position: absolute;
+    right: 100px;
+    top: -40px;
+  }
+  .main_h1 {
+    color: #293356;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .main_h3 {
+    color: #848ead;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .main_container {
+    width: 540px;
+    height: 397px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.15);
+    position: absolute;
+      margin-top: 266px;
   }
   
