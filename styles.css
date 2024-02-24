@@ -53,6 +53,7 @@ body {
   box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.15);
   position: absolute;
   margin-top: 266px;
+  padding: 40px;
 }
 .section_1 {
   display: flex;
@@ -70,22 +71,46 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.price_month{
+.price_month {
   color: #293356;
-text-align: right;
-font-family: Manrope;
-font-size: 40px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-letter-spacing: -1px;
+  font-family: Manrope;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: -1px;
+  align-items: center;
+  display: flex;
 }
 #month {
-  color: #848EAD;
-text-align: center;
-font-family: Manrope;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  color: #848ead;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 8px;
 }
+.main_measure {
+  width: 444px;
+  height: 8px;
+  border-radius: 5px;
+  background: #ecf0fb;
+}
+
+.green_measure {
+  width: 216px;
+  height: 8px;
+  border-radius: 5px;
+  background: #a4f3eb;
+}
+.section_2 {
+  display: flex;
+  margin-top: 58px;
+}
+.green_measureSvg{
+  
+}
+/* .main_section {
+} */
