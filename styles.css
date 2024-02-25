@@ -204,3 +204,10 @@ body {
   margin-left: 44px;
   margin-top: 10px;
 }
+.Startmy_trial:hover {
+  color: #fff;
+  cursor: pointer;
+}
+#my_svg {
+  cursor: pointer;
+}
