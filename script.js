@@ -38,25 +38,25 @@ document.addEventListener("DOMContentLoaded", function () {
       price.innerHTML = "$" + (36 * year - 36 * year * discount) + ".00";
     }
   });
+  let svg = document.getElementById("my_svg");
+  let svgDiv = document.getElementById("svgDiv");
+  let color = document.getElementById("color_change");
+  let month = document.getElementById("month");
+  
+  let myCircle = document.getElementById("circle");
+  let isChanged = true;
+  svgDiv.addEventListener("click", function () {
+    if (isChanged) {
+      svgDiv.style.background = "#7AEADF";
+      myCircle.style.marginLeft = "25px";
+      month.innerHTML = "year";
+    } else {
+      svgDiv.style.background = "rgba(207, 216, 239, 1)";
+      myCircle.style.marginLeft = "4px";
+      month.innerHTML = "month";
+    }
+  
+    isChanged = !isChanged;
+  });
 });
 
-let svg = document.getElementById("my_svg");
-let svgDiv = document.getElementById("svgDiv");
-let color = document.getElementById("color_change");
-let month = document.getElementById("month");
-
-let myCircle = document.getElementById("circle");
-let isChanged = true;
-svgDiv.addEventListener("click", function () {
-  if (isChanged) {
-    svgDiv.style.background = "#7AEADF";
-    myCircle.style.marginLeft = "25px";
-    month.innerHTML = "year";
-  } else {
-    svgDiv.style.background = "rgba(207, 216, 239, 1)";
-    myCircle.style.marginLeft = "4px";
-    month.innerHTML = "month";
-  }
-
-  isChanged = !isChanged;
-});
