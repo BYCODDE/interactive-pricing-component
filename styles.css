@@ -44,7 +44,9 @@ body {
   font-weight: 600;
   line-height: normal;
 }
-
+#main_h3 br {
+  display: none;
+}
 .main_container {
   width: 540px;
   height: 397px;
@@ -323,6 +325,9 @@ input[type="range"]::-moz-range-thumb:active {
   #main_h3 {
     font-size: 13px;
   }
+  #main_h3 br {
+    display: block;
+  }
   .main_container {
     flex-direction: column;
     display: flex;
@@ -358,6 +363,7 @@ input[type="range"]::-moz-range-thumb:active {
   }
   .section_2 {
     margin-top: 7px;
+    justify-content: center;
   }
   .price_month {
     position: absolute;
@@ -370,6 +376,7 @@ input[type="range"]::-moz-range-thumb:active {
   }
   .main_container {
     padding: 20px;
+    justify-content: center;
   }
   .section_4 {
     flex-direction: column;
@@ -379,5 +386,11 @@ input[type="range"]::-moz-range-thumb:active {
   .Startmy_trial {
     margin-left: 0;
     margin-top: 33px;
+  }
+  .bonusapproved3 {
+    margin-left: 27px;
+  }
+  .main_svg {
+    right: 83px;
   }
 }
