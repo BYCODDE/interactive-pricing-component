@@ -1,36 +1,46 @@
-// let svg = document.getElementById("my_svg");
-// let svgWidth = document.getElementById("my_svg").getAttribute("width");
+document.addEventListener("DOMContentLoaded", function () {
+  let range = document.getElementById("myRange");
+  let track = document.querySelector(".section_2 input");
+  let price = document.getElementById("price");
+  let views = document.getElementById("views");
+  let month = document.getElementById("month");
+  range.addEventListener("input", function () {
+    let x = this.value;
+    let colorStop = (x / (this.max - this.min)) * 100 + "%";
+    let gradient = `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ${colorStop}, hsl(224, 65%, 95%) ${colorStop}, hsl(224, 65%, 95%) 100%)`;
+    track.style.background = gradient;
+    if (colorStop === "0%") {
+      views.innerHTML = "10K PAGEVIEWS";
+      price.innerHTML = "$8.00";
+    } else if (colorStop === "25%") {
+      views.innerHTML = "50K PAGEVIEWS";
+      price.innerHTML = "$12.00";
+    } else if (colorStop === "50%") {
+      views.innerHTML = "100K PAGEVIEWS";
+      price.innerHTML = "$16.00";
+    } else if (colorStop === "75%") {
+      views.innerHTML = "500K PAGEVIEWS";
+      price.innerHTML = "$24.00";
+    } else {
+      views.innerHTML = "1M PAGEVIEWS";
+      price.innerHTML = "$36.00";
+    }
+  });
+});
 
-// let color = document.getElementById("color_change");
+let svg = document.getElementById("my_svg");
+let svgDiv = document.getElementById("svgDiv");
+let color = document.getElementById("color_change");
 
-// let myCircle = document.getElementById("my_circle");
-// let isChanged = true;
-// svg.addEventListener("click", function () {
-//   if (isChanged) {
-//     color.setAttribute("fill", "rgba(122, 234, 223, 1)");
-//     myCircle.setAttribute("cx", svgWidth - 11);
-//   } else {
-//     color.setAttribute("fill", "#CFD8EF");
-//     myCircle.setAttribute("cx", "11");
-//   }
-
-//   isChanged = !isChanged;
-// });
-
-let mySvg = document.getElementById("my_svg");
-let myWidth = document.getElementById("my_svg").getAttribute("width");
-let colorChange = document.getElementById("color_change");
-
-let myCircle = document.getElementById("my_circle");
-
+let myCircle = document.getElementById("circle");
 let isChanged = true;
-mySvg.addEventListener("click", function () {
+svgDiv.addEventListener("click", function () {
   if (isChanged) {
-    colorChange.setAttribute("fill", "rgba(122, 234, 223, 1)");
-    myCircle.setAttribute("cx", myWidth - 11);
+    svgDiv.style.background = "#7AEADF";
+    myCircle.style.marginLeft = "25px";
   } else {
-    colorChange.setAttribute("fill", "#CFD8EF");
-    myCircle.setAttribute("cx", "11");
+    svgDiv.style.background = "rgba(207, 216, 239, 1)";
+    myCircle.style.marginLeft = "4px";
   }
 
   isChanged = !isChanged;
