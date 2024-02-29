@@ -10,19 +10,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let colorStop = (x / (this.max - this.min)) * 100 + "%";
     let gradient = `linear-gradient(to right, hsl(174, 77%, 80%) 0%, hsl(174, 77%, 80%) ${colorStop}, hsl(224, 65%, 95%) ${colorStop}, hsl(224, 65%, 95%) 100%)`;
     track.style.background = gradient;
-    if (colorStop === "0%") {
+    if (colorStop === "0%" && month.innerHTML === "/ month") {
       views.innerHTML = "10K PAGEVIEWS";
       price.innerHTML = "$8.00";
-    } else if (colorStop === "25%") {
+    } else if (colorStop === "25%" && month.innerHTML === "/ month") {
       views.innerHTML = "50K PAGEVIEWS";
       price.innerHTML = "$12.00";
-    } else if (colorStop === "50%") {
+    } else if (colorStop === "50%" && month.innerHTML === "/ month") {
       views.innerHTML = "100K PAGEVIEWS";
       price.innerHTML = "$16.00";
-    } else if (colorStop === "75%") {
+    } else if (colorStop === "75%" && month.innerHTML === "/ month") {
       views.innerHTML = "500K PAGEVIEWS";
       price.innerHTML = "$24.00";
-    } else {
+    } else if (colorStop === "100%" && month.innerHTML === "/ month") {
       views.innerHTML = "1M PAGEVIEWS";
       price.innerHTML = "$36.00";
     }
@@ -34,15 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
       price.innerHTML = "$" + (16 * year - 16 * year * discount) + ".00";
     } else if (month.innerHTML === "year" && colorStop === "75%") {
       price.innerHTML = "$" + (24 * year - 24 * year * discount) + ".00";
-    } else {
+    } else if (month.innerHTML === "year" && colorStop === "100%") {
       price.innerHTML = "$" + (36 * year - 36 * year * discount) + ".00";
     }
   });
-  let svg = document.getElementById("my_svg");
   let svgDiv = document.getElementById("svgDiv");
-  let color = document.getElementById("color_change");
   let month = document.getElementById("month");
-  
+
   let myCircle = document.getElementById("circle");
   let isChanged = true;
   svgDiv.addEventListener("click", function () {
@@ -53,10 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       svgDiv.style.background = "rgba(207, 216, 239, 1)";
       myCircle.style.marginLeft = "4px";
-      month.innerHTML = "month";
+      month.innerHTML = "/ month";
     }
-  
+
     isChanged = !isChanged;
+
+
+
   });
 });
-
